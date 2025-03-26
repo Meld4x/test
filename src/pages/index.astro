@@ -1,11 +1,14 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import background from '../assets/background.svg';
+import home_bg_1 from '../assets/home_bg_1.jpeg';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const pageTitle = "Home";
 ---
 
-<Layout>
-	<Welcome />
+<Layout pageTitle={pageTitle}>
+	<div id="container">
+		<main>
+				<img class="home_bg" src={home_bg_1.src}>
+		</main>
+	</div>
 </Layout>
