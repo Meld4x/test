@@ -12,7 +12,7 @@ const allGalleries = Object.values(import.meta.glob('./galleries/*.astro', { eag
 			This is where the galleries will live.
 			</h2>
 			<section id="galleries">
-					{allGalleries.map((post: any) => <li><a href={post.url}>{post.frontmatter.pageTitle}</a></li>)}
+					{allGalleries.map((post: any) => <li><a href={post.url}>{pageTitle}</a></li>)}
 			</section>
 		</main>
 	</div>
