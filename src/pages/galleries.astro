@@ -1,0 +1,19 @@
+---
+import background from '../assets/background.svg';
+import Layout from '../layouts/Layout.astro';
+const pageTitle = "Gallery";
+const allGalleries = Object.values(import.meta.glob('./galleries/*.astro', { eager: true }));
+---
+
+<Layout pageTitle={pageTitle}>
+	<div id="container">
+		<main>
+			<h2>
+			This is where the galleries will live.
+			</h2>
+			<section id="galleries">
+					{allGalleries.map((post: any) => <li><a href={post.url}>{pageTitle}</a></li>)}
+			</section>
+		</main>
+	</div>
+</Layout>

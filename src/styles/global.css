@@ -35,32 +35,29 @@ html {
 	background-color: #ff9776;
   }
   
-  .nav-links {
+
+  #nav-links {
 	width: 100%;
 	top: 5rem;
 	left: 48px;
-	background-color: #ff9776;
-	display: none;
-	margin: 0;
+	display: flex;
+	justify-content: center;
+
   }
-  
-  .nav-links a {
-	display: block;
-	text-align: center;
-	padding: 10px 0;
+  #nav-links a {
 	text-decoration: none;
 	font-size: 1.2rem;
 	font-weight: bold;
 	text-transform: uppercase;
 	color: black;
+	padding: 0.5rem 1rem;
   }
-
-  .nav-links a:hover,
-  .nav-links a:focus {
+  #nav-links a:hover,
+  #nav-links a:focus {
 	background-color: #929292;
   }
 
-  .nav-links a:visited {
+  #nav-links a:visited {
 	color: black;
   }
   
@@ -99,16 +96,4 @@ html {
 
 .home_bg {
 	width: 100%;
-	height: auto;
   }
-
-.footer {
-	display: block;
-	text-align: center;
-	padding: 10px 0;
-	text-decoration: none;
-	font-size: 1.2rem;
-	font-weight: bold;
-	text-transform: uppercase;
-	color: #000;
-}
