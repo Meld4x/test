@@ -1,0 +1,38 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+const pageTitle = "Gallery1-2";
+export const frontmatter = {
+  pageTitle: "Gallery1-2"
+};
+
+import { Image } from 'astro:assets';
+
+const imageFiles = await Astro.glob('../../../assets/galleries/gallery1/section2/*');
+
+---
+
+<Layout pageTitle={pageTitle}>
+  <div id="container">
+    <main>
+      <h2>{pageTitle}</h2>
+  <a href="section1">Section 1</a>
+  | Section 2
+  </main>
+  </div>
+
+  <div id="galleryimages">
+    <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 mb-5 mx-auto w-full px-4">
+        {
+          imageFiles.map((img) => (
+            <Image
+              src={img.default}
+              width="400"
+              alt="blah"
+              class="mb-3 w-full rounded"
+            />
+          ))
+        }
+      </div>
+    </div>
+  </Layout>
+
